@@ -40,3 +40,32 @@ $$Z_2 = (X - \mu)\cdot v_2$$
 3. Which point (A or B) would have the higher reconstruction error after projecting onto the first principal component direction $v_1$? Circle one:
    - [x] Point A
    - [ ] Point B
+
+
+
+## The 2004 10-701 midterm
+
+### 1. K-Means and Hierarchical Clustering
+
+1. Perform K-means on the dataset given below. Circles are data points and there are two initial cluster centers, at data points 5 and 7. Draw the cluster centers (as squares) and the decision boundaries that define each cluster. If no points belong to a particular cluster, assume its center does not change. Use as many of the pictures as you need for convergence.
+
+   ![image.png](..\resources\img\kmeans.png)
+
+   2. Give one advantage of hierarchical clustering over K-means clustering, and one advantage of K-means over hierarchical clustering.
+
+      Some advantages of hierarchical clustering:
+
+      - Don't need to know hoy many clusters you're after
+      - Can cut hierarchy at any level to get any number of clusters
+      - Easy to interpret hierarchy for particular applications
+      - Can deal with long stringy data
+
+      Some advantages of K-means clustering:
+
+      - Can be much faster than hierarchical clustering, depending on data
+      - Nice theoretical framework
+      - Can incorporate new data and reform clusters easily
+
+      
+
+   
