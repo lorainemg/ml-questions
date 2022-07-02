@@ -12,7 +12,9 @@ Plotted in the next figure are two dimensional data drawn from a multivariate No
 
 1. What is the mean of this distribution? Estimate the answer visually and round to the nearest integer.
 
-   ​	$$ E[X_1] = \mu_1 = 5 $$
+   ​	**Answer:** 
+
+   ​	$$E[X_1] = \mu_1 = 5 $$
 
    ​	$$ E[X_2] = \mu_2 = 5 $$
 
@@ -53,15 +55,17 @@ $$Z_2 = (X - \mu)\cdot v_2$$
 
    2. Give one advantage of hierarchical clustering over K-means clustering, and one advantage of K-means over hierarchical clustering.
 
-      *Some advantages of hierarchical clustering:*
+      **Answer:** 
 
+      *Some advantages of hierarchical clustering:*
+      
       - *Don't need to know hoy many clusters you're after*
       - *Can cut hierarchy at any level to get any number of clusters*
-      - *Easy to interpret hierarchy for particular applications*
+- *Easy to interpret hierarchy for particular applications*
       - *Can deal with long stringy data*
 
       *Some advantages of K-means clustering:*
-
+      
       - *Can be much faster than hierarchical clustering, depending on data*
       - *Nice theoretical framework*
       - *Can incorporate new data and reform clusters easily*
@@ -99,7 +103,7 @@ In the left of the following pictures I show a dataset. In the right figure I sk
 
 1. What is the effect on the means found by k-means (as opposed to the true means) of overlapping clusters?
 
-   *They are pushed further apart than the true means would be.*
+   **Answer:** *They are pushed further apart than the true means would be.*
 
 2. Run k-means manually for the following dataset. Circles are data points and squares are the initial cluster centers. Draw cluster centers and the decision boundaries that define each cluster. Use as many pictures as you need until convergence.
 
@@ -111,9 +115,9 @@ In the left of the following pictures I show a dataset. In the right figure I sk
 
    <img src="..\resources\img\gmm.png" alt="image.png" style="zoom: 50%;" />
 
-   4. Is the classification given by the mixture model the same as the classification given by k-means? Why or why not?
+4. Is the classification given by the mixture model the same as the classification given by k-means? Why or why not?
 
-      *I'd answer if I knew the start locations.*
+   **Answer:** *I'd answer if I knew the start locations.*
 
 
 
@@ -127,21 +131,21 @@ Consider the  classification problem illustrated in the following figure. The d
 
 1. Plot the maximum likelihood estimates of the means of the two Gaussians in the figure. Mark the means as points "x" and label them "0" and "1" according to class.
 
-   *The means of the two Gaussians should be close to the center of mass of points*
+   **Answer:** *The means of the two Gaussians should be close to the center of mass of points*
 
    <img src="C:\_School\Clases Uni\ML\ml-questions\resources\img\gmm_2003_sol.png" alt="gmm_2003_sol" style="zoom:60%;" />
 
 2. Based on the learned GMM, what is the probability of generating a new data point that belongs to  class 0?
 
-   *0.5*
+   **Answer:** *0.5*
 
 3.  How many data points are classified *incorrectly*?
 
-   *3*
+   **Answer:** *3*
 
 4. Draw the decision boundary in the same figure.
 
-   *Since the two classes have the same number of points and identical covariance matrices, the decision boundary should be a straight line, which is also the orthogonal bisector of the line segment connecting the class means*
+   **Answer:** *Since the two classes have the same number of points and identical covariance matrices, the decision boundary should be a straight line, which is also the orthogonal bisector of the line segment connecting the class means*
 
 ### 2. K-means Clustering
 
@@ -156,7 +160,7 @@ Clearly any *k*-partition induces a set of *k* centroids in the natural manner. 
 
 1. How many 3-starting configurations are there? (Remember, a 3-starting configuration is just a subset, of size 3, of the six datapoints).
 
-   *$C^3_6 = 20$*
+   **Answer:** *$C^3_6 = 20$*
 
 2. Fill in the following table:
 
@@ -180,7 +184,7 @@ Consider the following figure which contains labeled (class 1 black circles clas
 
 1. How can we use co-training in this case (what are the two classifiers) ?
 
-   *Co-training partitions the feature space into two separate sets and uses these sets to construct independent classifiers. Here, the most natural way is to use one classifier (a Gaussian) for the x axis and the second (another Gaussian) using the y axis.*
+   **Answer:** *Co-training partitions the feature space into two separate sets and uses these sets to construct independent classifiers. Here, the most natural way is to use one classifier (a Gaussian) for the x axis and the second (another Gaussian) using the y axis.*
 
 2. We would like to use re-weighting of unlabeled data to improve the classification performance. Reweighting will be done by placing a the dashed circle on each of the labeled data points and counting the number of unlabeled data points in that circle. Next, a Gaussian classifier is run with the new weights computed.
 
@@ -188,11 +192,11 @@ Consider the following figure which contains labeled (class 1 black circles clas
 
    1. To what class (hollow circles or full circles) would we assign the unlabeled point A is we were training a Gaussian classifier using only the labeled data points (with no re-weighting)?
 
-      *Hollow class. Note that the hollow points are much more spread out and so the Gaussian learned for them will have a higher variance.*
+      **Answer:** *Hollow class. Note that the hollow points are much more spread out and so the Gaussian learned for them will have a higher variance.*
 
    2. To what class (hollow circles or full circles) would we assign the unlabeled point A is we were training a classifier using the re-weighting procedure described above?
 
-      *Again, the hollow class. Re-weighting will not change the result since it will be done independently for each of the two classes, and will produce very similar class centers to the ones in 1 above.*
+      **Answer:** *Again, the hollow class. Re-weighting will not change the result since it will be done independently for each of the two classes, and will produce very similar class centers to the ones in 1 above.*
 
    3. When we handle a polynomial regression problem, we would like to decide what degree of polynomial to use in order to fit a test set. The table below describes the dis-agreement between the different polynomials on unlabeled data and also the disagreement with the labeled data. Based on the method presented in class, which polynomial should we chose for this data? **Which of the two tables do you prefer?**
 
@@ -205,7 +209,9 @@ Consider the following figure which contains labeled (class 1 black circles clas
       | 4                             |       |       |       |   0   |  0.3  |               0               |
       | 5                             |       |       |       |       |   0   |               0               |
 
-      *The degree we would select is 3. Based on the classification accuracy, it is beneficial to use higher degree polynomials. However, as we said in class these might overfit. One way to test if they do or don’t is to check consistency on unlabeled data by requiring that the triangle inequality will hold for the selected degree. For a third degree this is indeed the case since* $u(2, 3) = 0.2 \leq l(2) + l(3) = 0.2 + 0.1$ *(where* $u(2, 3)$ *is the disagreement between the second and third degree polynomials on the unlabeled data and* $l(2)$ *is the disagreement between degree 2 in the labeled data). Similarly,* $u(1, 3) = 0.5 \leq l(1) + l(3) = 0.4 + 0.1$. In contrast, this does not hold for a fourth degree polynomial since $u(3, 4) = 0.2 > l(3) + l(4) = 0.1$.
+      
+      
+      **Answer:** *The degree we would select is 3. Based on the classification accuracy, it is beneficial to use higher degree polynomials. However, as we said in class these might overfit. One way to test if they do or don’t is to check consistency on unlabeled data by requiring that the triangle inequality will hold for the selected degree. For a third degree this is indeed the case since* $u(2, 3) = 0.2 \leq l(2) + l(3) = 0.2 + 0.1$ *(where* $u(2, 3)$ *is the disagreement between the second and third degree polynomials on the unlabeled data and* $l(2)$ *is the disagreement between degree 2 in the labeled data). Similarly,* $u(1, 3) = 0.5 \leq l(1) + l(3) = 0.4 + 0.1$. In contrast, this does not hold for a fourth degree polynomial since $u(3, 4) = 0.2 > l(3) + l(4) = 0.1$.
 
 
 
@@ -242,3 +248,74 @@ In this problem, we consider the 2-clustering problem, in which we have $N$ data
 
 1. The data points are shown in Figure (A1) above. The grid unit is 1. Let $W_{ij} = e^{−||x_i−x_j||^2_2}$, give the clustering results of min-cut and normalized cut respectively (You may show your work in the figure directly).
 2. The data points are shown in Figure (A2) above. The grid unit is 1. Let $W_{ij} = e^{\dfrac{−||x_i−x_j||^2_2}{2\sigma^2}}$, describe the clustering results of min-cut algorithm for $\sigma^2 = 50$ and $\sigma^2 = 0.5$ respectively.
+
+
+
+## The 2008 final
+
+### 1. Assorted Questions
+
+1. (**True** or **False**) PCA and Spectral Clustering (such as Andrew Ng’s) perform eigen-decomposition on two different matrices. However, the size of these two matrices are the same.
+
+   **Answer:** *False, the size of the metrices are not the same, the matrix of PCA has the size of the number of features, the matrix of Spectral Clustering has the size of the amount of records.*
+
+### 2. Principle Component Analysis (PCA)
+
+1. **Basic PCA**
+
+   Given 3 data points in 2-d space, (1, 1), (2, 2) and (3, 3),
+
+   1. What is the first principle component?
+
+      **Answer:** *$pc = (1/\sqrt{2}, 1/\sqrt{2})' = (0.707, 0.707)'$ , (the negation is also correct)*
+
+   2. If we want to project the original data points into 1-d space by principle component you choose, what is the variance of the projected data?
+
+      **Answer:** *4/3 = 1.33*
+
+   3. For the projected data in (b), now if we represent them in the original 2-d space, what is the reconstruction error?
+
+      **Answer:** *0*
+
+2. **PCA and SVD**
+
+   Given 6 data points in 5-d space, (1, 1, 1, 0, 0), (−3, −3, −3, 0, 0), (2, 2, 2, 0, 0), (0, 0, 0, −1, −1), (0, 0, 0, 2, 2), (0, 0, 0, −1, −1). We can represent these data points by a $6\times 5$ matrix X, where each row corresponds to a data point:
+
+   $X = \begin{bmatrix} 1&1&1&0&0 \\ -3&-3&-3&0&0 \\ 2&2&2&0&0 \\ 0&0&0&−1&−1 \\0&0&0&2&2 \\ 0&0&0&−1&-1 \end{bmatrix}$
+
+1. What is the sample mean of the data set?
+
+   **Answer:** *[0, 0, 0, 0, 0]*
+
+2. What is SVD of the data matrix $X$ you choose?
+
+   *hints*: The SVD for this matrix must take the following form, where $a, b, c, d, σ_1, σ_2$ are the parameters you need to decide.
+
+   $X = \begin{bmatrix} a&0 \\ -3a&0 \\ 2a&0 \\ 0&b \\0&-2b \\ 0&b \end{bmatrix}\times \begin{bmatrix} \sigma_1&0 \\ 0&\sigma_2 \end{bmatrix}\times \begin{bmatrix} c&c&c&0&0 \\ 0&0&0&d&d \end{bmatrix}$
+
+    **Answer:**
+
+   - $a = \pm1/ \sqrt{14} = \pm0.267$, 
+   - $b = \pm1/ \sqrt6 = \pm0.408$, 
+   - $\sigma_1 = 1/(a \cdot c) = \sqrt42 = 6.48$, 
+   - $\sigma_2 = 1/(b \cdot d) = \sqrt12 = 3.46$, 
+   - $c = \pm1/ \sqrt3 = \pm0.577$,
+   - $d = \pm1/ \sqrt2 = \pm0.707$.
+
+3. What is first principle component for the original data points?
+
+   **Answer:** $pc=\pm[c, c, c, 0, 0] = \pm[0.577, 0.577, 0.577, 0, 0]$ *(Intuition: First, we want to notice that the first three data points are co-linear, and so do the last three data points. And also the first three data points are orthogonal to the rest three data points. Then, we want notice that the norm of the first three are much bigger than the last three, therefor, the first pc has the same direction as the first three data points)*
+
+4. If we want to project the original data points into 1-d space by principle component you choose, what is the variance of the projected data?
+
+   **Answer:** *$var=\sigma^2_1/6 = 7$ (Intuition: we just the keep the first three data points, and set the rest three data points as [0, 0, 0, 0, 0] (since they are orthogonal to pc), and then compute the variance among them)*
+
+5. For the projected data in (d), now if we represent them in the original 5-d space, what is the reconstruction error?
+
+   **Answer:** $var=\sigma^2_2/6 = 2^1$ (*Intuition, since the first three data points are orthogonal with the rest three, here the rerr is the just the sum of the norm of the last three data points (2+8+2=12), and then divided by the total number (6) of data points, if we use average definition)*
+
+## The 2009 Final
+
+### 1. Short Questions
+
+7.  Let a configuration of the k means algorithm correspond to the k way partition (on the set of instances to be clustered) generated by the clustering at the end of each iteration. Is it possible for the k-means algorithm to revisit a configuration? Justify how your answer proves that the k means algorithm converges in a finite number of steps
